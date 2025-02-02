@@ -1,3 +1,4 @@
+
 /* Variables */
 :root {
     --primary-color: #b3d89c;
@@ -67,9 +68,10 @@ nav a:hover {
 }
 
 .hero img {
-    display: block;
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
     height: auto;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -97,6 +99,7 @@ nav a:hover {
 
 /* Layout: Text - Image - Text */
 .history-container {
+    gap: 50px;
     display: grid;
     grid-template-columns: 1fr auto 1fr; /* Text - Image - Text */
     gap: 100px;
