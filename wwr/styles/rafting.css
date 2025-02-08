@@ -178,3 +178,131 @@ footer .sociallinks img {
         flex-direction: column;
     }
 }
+/* Contact Page Styling */
+#contact-info, #team, #contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Information */
+#contact-info h2, #team h2, #contact-form h2 {
+    text-align: center;
+    color: #0077cc;
+}
+
+#contact-info p {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Google Map */
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* Employee Profiles */
+#team {
+    text-align: center;
+}
+
+.employee {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.employee img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.employee p {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Contact Form */
+#contact-form {
+    background-color: white;
+    padding: 20px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#contact-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+    background-color: #005fa3;
+}
+
+/* Newsletter Checkbox */
+#contact-form label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+#contact-info h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0077cc;
+    margin-top: 20px;
+}
+
+#contact-info iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    max-width: 100%;
+}
