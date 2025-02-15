@@ -18,28 +18,29 @@ body {
     background-color: var(--background-color);
 }
 
+/* Modern Header */
 header {
-    display: grid;
-    grid-template-rows: auto auto; /* Logo on top, nav below */
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-}
-
-header img {
-    max-height: 60px;
-    margin: 0 auto; /* Centers the logo */
-    display: block;
-}
-
-nav {
     display: flex;
-    justify-content: center; /* Centers nav below logo */
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: linear-gradient(to right, #b3d89c, #77a6b6); /* Modern gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Logo Styling */
+header img {
+    height: 60px;
+    width: auto;
+}
+
+/* Navigation Styling */
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 25px; /* Spaced-out links */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -52,13 +53,28 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
     font-weight: bold;
     padding: 10px 15px;
-    display: inline-block;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #004a99; /* Highlight effect */
+    transform: scale(1.1);
+}
+
+/* Responsive Header Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Hero Section */
@@ -68,10 +84,11 @@ nav a:hover {
 }
 
 .hero img {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: auto;
     height: auto;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .hero h1 {
@@ -79,10 +96,10 @@ nav a:hover {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(247, 245, 245);
     font-family: var(--font-heading);
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* History Section */
@@ -236,8 +253,13 @@ iframe {
 /* Contact Form */
 #contact-form {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 785px;
+    margin: 40px auto;
 }
+
 
 #contact-form label {
     font-weight: bold;
@@ -255,6 +277,7 @@ iframe {
     border-radius: 5px;
     font-size: 16px;
 }
+
 
 #contact-form textarea {
     height: 120px;
@@ -305,4 +328,376 @@ main h1 {
     margin: 0 auto;
     border-radius: 8px;
     max-width: 100%;
+}
+
+/* Hero Section - Only Affects trips.html */
+.trips-page.hero {
+    background: url("../images/hero-image.jpg") center/cover no-repeat;
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Adds dark overlay for readability */
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+
+.hero-content {
+    background: none; /* Keeps background color */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    text-align: center; /* Ensures text stays centered */
+    width: 100%; /* Ensures it spans full width */
+    height: 120px; /* Adjusts the height for centering */
+    border-radius: 8px;
+}
+
+
+/* Feature Section - Only Affects trips.html */
+.trips-page .features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1100px;
+}
+
+.trips-page .feature {
+    flex: 1;
+    max-width: 300px;
+}
+
+.trips-page .feature img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #d1b195;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Adventure Section - Only Affects trips.html */
+.trips-page .adventure {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+}
+
+.trips-page .adventure img {
+    width: 100%;
+    height: auto;
+}
+
+.trips-page .adventure-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(90, 111, 83, 0.9);
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Trip Table - Only Affects trips.html */
+.trip-table {
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.trip-table th {
+    background-color: #0077b6;
+    color: white;
+    font-weight: bold;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cta {
+    text-align: center;
+    background-color: #77a6b6;
+    color: white;
+    padding: 30px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.cta a {
+    display: inline-block;
+    background: #004a99;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta a:hover {
+    background: #002f6c;
+}
+
+.trip-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images in the row */
+    gap: 20px;
+    text-align: center; /* Ensures text is also centered */
+    margin-bottom: 20px
+}
+
+.trip {
+    max-width: 350px;
+    text-align: center;
+}
+
+.trip img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers images */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Rental Section */
+.rental-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.rental-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.rental-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.rental-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+}
+
+.rental-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rental-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-top: 10px;
+}
+
+/* Full-width Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Newsletter Signup */
+.newsletter {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto; /* Centering with margin */
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #005fa3;
+}
+    .cta {
+    text-align: center;
+    background-color: #0077cc;
+    color: white;
+    padding: 30px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta a {
+    display: inline-block;
+    background: white;
+    color: #0077cc;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta a:hover {
+    background: #005fa3;
+    color: white;
+}
+}
+
+/* CSS Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta a {
+    display: inline-block;
+    background: #004a99;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta a:hover {
+    background: #002f6c;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
